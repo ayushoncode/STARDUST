@@ -1,0 +1,124 @@
+
+body {
+
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  position: relative;
+ 
+
+}
+
+
+
+
+.parent{
+height: 100vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+
+
+}
+
+.sun {
+    height: 10vw;
+    width: 10vw;
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+        bottom: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 40px 15px orange;
+    
+
+   
+
+} 
+
+.earthorbit{
+    height: 32vw;
+    width: 32vw;
+    border-radius: 50%;
+    display: flex;
+     transform: translate(-50%,-50%);
+    top: 50%;
+    bottom: 50%;
+   
+    animation: rotation 20s ease-in-out 0s infinite normal;
+}
+
+.earth{
+
+height: 6vw;
+width: 6vw;
+border: 1px solid black;
+border-radius: 50%;
+position: relative;
+background-color: rgb(14, 90, 221);
+box-shadow: 0px 0px 20px blue;
+top: 0;
+ animation: earthspin 8s ease-in-out 0s infinite;
+
+}
+
+
+.moon-orbit {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: moonorbo 5s ease-in-out 0s infinite;
+}
+.moon{
+
+    height: 2.5vw;
+    width: 2.5vw;
+    border: 1px solid black;
+    background-color:grey;
+    box-shadow: 0px 0px 20px grey;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 110%;
+      transform: translate(-50%, -50%);
+
+  
+ 
+
+}
+
+
+@keyframes rotation {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+} 
+
+
+@keyframes earthspin {
+  0% {
+     transform: translate(-50%, -50%) rotate(0deg);}
+
+  100% { 
+    transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+@keyframes moonorbo {
+  0% { 
+    transform: translate(-50%, -50%) rotate(0deg);}
+
+  100% { 
+    transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+

@@ -1,0 +1,138 @@
+  *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  position: relative;
+  background-image: url(https://premiumcoding.com/wp-content/uploads/2014/02/space-background1.png);
+ 
+
+}
+
+ #welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    
+}
+
+
+
+#title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  color: #1E90FF;
+   text-shadow: 0 0 8px#CFAEFF;
+   animation: sparkle 4s ease-in-out infinite;
+   
+     
+}
+
+@keyframes sparkle {
+    0% {
+      text-shadow: 0 0 5px #00FFFF;
+    }
+    50% {
+      text-shadow: 10px 10px 20px #FFD700;
+    }
+    100% {
+      text-shadow: 0 0 5px #7FDBFF;
+    }
+}
+
+
+#subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+   color: #1E90FF;
+   text-shadow: 0 0 10px #CFAEFF;
+    animation: sparkle 4s ease-in-out infinite;
+}
+
+#explore {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color:white;
+    color: #000000;
+    border-radius: 8px;
+    transition: 0.4s ease-in-out;
+
+
+}
+
+
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  color: #000;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, #ffffff00 0%, #f0f 50%, #0ff 100%);
+  animation: shine 2s linear infinite;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+@keyframes shine {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+button:hover {
+  box-shadow: 0 0 20px #f0f, 0 0 30px #0ff;
+}   
+ 
+.rocket{
+   
+    position: absolute;
+    bottom: 0;
+    left: 50;
+    transform: translateX(-50);
+    cursor: pointer;
+      animation: fly  3s linear forwards infinite;
+}
+.rocket img{
+    height: 15vh;
+    width: 8vh;
+
+
+}
+
+
+@keyframes fly{
+     0% {
+    transform: translatey(0);}
+  100% {
+    transform: translatey(-800px);}
+}
+
